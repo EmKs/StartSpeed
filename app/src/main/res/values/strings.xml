@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">星速</string>
+    <string name="prompt">设置完成,请重启学习通</string>
+    <string name="description">By:叫我阿喵</string>
+    <string name="content">本软件仅作测试使用</string>
+    <string name="skip_mode">秒看跳过视频</string>
+    <string name="quicken_mode">解除倍数限制</string>
+    <string name="progress_mode">解除进度条限制</string>
+    <string name="progress_prompt">进度条可通过点击时间总长隐藏，也可通过切换倍数显示</string>
+    <string name="time">00:00</string>
+</resources>

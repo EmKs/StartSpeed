@@ -1,0 +1,66 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name="VerticalLayout">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="IconStyle">
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:drawablePadding">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawableTop">@mipmap/icon</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    
+    <style name="SwitchStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:background">@drawable/background_switch_main</item>
+    </style>
+
+    <style name="SeekBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="SeekBarTextDialog">
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">65dp</item>
+    </style>
+
+    <style name="AccelerateTextDialog">
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:color">@color/colorText</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

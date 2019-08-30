@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        style="@style/VerticalLayout"
+        android:background="@color/colorBackground"
+        android:gravity="center">
+
+        <TextView
+            style="@style/IconStyle"
+            android:text="@string/content" />
+
+        <LinearLayout
+            style="@style/VerticalLayout"
+            android:background="@android:color/white">
+
+            <Switch
+                android:id="@+id/switch_skip"
+                style="@style/SwitchStyle"
+                android:text="@string/skip_mode" />
+
+            <Switch
+                android:id="@+id/switch_quicken"
+                style="@style/SwitchStyle"
+                android:text="@string/quicken_mode" />
+
+            <Switch
+                android:id="@+id/switch_progress"
+                style="@style/SwitchStyle"
+                android:text="@string/progress_mode" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:gravity="bottom|center"
+                android:paddingBottom="10dp"
+                android:text="@string/progress_prompt"
+                tools:ignore="InefficientWeight" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

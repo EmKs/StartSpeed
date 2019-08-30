@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'AndResGuard'
+
+android {
+    signingConfigs {
+        MHyun {
+            keyAlias 'MHyun'
+            keyPassword 'qinmiaoxuan'
+            storeFile file('G:/Android/Xposed/StarSpeed/MHyun.jks')
+            storePassword 'qinmiaoxuan'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.mhyun.starspeed"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfigs "zh"
+//        ndk{
+//            abiFilters 'armeabi'
+//        }
+    }
+    buildTypes {
+        MHyun {
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.MHyun
+            renderscriptDebuggable false
+            renderscriptOptimLevel 1
+            minifyEnabled true
+            shrinkResources true
+            pseudoLocalesEnabled false
+            zipAlignEnabled true
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding{
+        enabled true
+    }
+    andResGuard {
+        mappingFile = null
+        use7zip = true
+        useSign = true
+        keepRoot = false
+        whiteList = [
+                "R.mipmap.icon",
+                "R.drawable.background_switch_main"
+        ]
+        compressFilePattern = [
+                "*.png",
+                "*.jpg",
+                "*.jpeg",
+                "*.gif",
+                "resources.arsc"
+        ]
+        sevenzip {
+            artifact = 'com.tencent.mm:SevenZip:1.2.8'
+        }
+        finalApkBackupPath = "${project.rootDir}/StarSpeed.apk"
+        digestalg = "SHA256"
+    }
+}
+
+dependencies {
+    //    provided fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    provided files('libs/XposedBridgeApi-54.jar')
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+}
